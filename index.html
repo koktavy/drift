@@ -189,9 +189,9 @@ function tide() {
   }
   for (i = 0; i < waves.length; i++) {
     // Stagger the wave updates to create more of a "washing up" effect
-    setTimeout(() => {
+    // setTimeout(() => {
         waves[i].style.transform = 'scale(' + (size + (Math.random() * 0.002)) + ')' + details;
-    }, i * 250)
+    // }, i * 250)
   }
 }
 
