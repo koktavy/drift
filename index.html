@@ -183,7 +183,7 @@ function moveSun() {
 // Loop over waves incrementing each a little.
 function tide(wave, size, dir) {
   checkDirection(size, dir);
-  if (direction === 0) {
+  if (dir === 0) {
     size -= 0.0008;
   } else {
     size += 0.0008;
