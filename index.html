@@ -178,15 +178,7 @@ function moveSun() {
     }
 }
 
-// Calls tide() on the interval.
-waves.forEach((wave, i) => {
-    setTimeout(function move() {
-        setInterval(() => {
-            tide(wave, sizes[i], dirs[i])
-        }, 20);
-    }, i * 250)
-}
-var makeWaves = setInterval(tide, 20);
+// var makeWaves = setInterval(tide, 20);
 
 // Loop over waves incrementing each a little.
 function tide(wave, size, dir) {
@@ -211,6 +203,15 @@ function checkDirection(size, dir) {
   if (size > 1.25) {
     dir = 0;
   }
+}
+
+// Calls tide() on the interval.
+waves.forEach((wave, i) => {
+    setTimeout(function test1() {
+        setInterval(function test2() {
+            tide(wave, sizes[i], dirs[i])
+        }, 20);
+    }, i * 250)
 }
     </script>
   </body>
