@@ -206,10 +206,11 @@ function checkDirection(size, dir) {
 }
 
 // Calls tide() on the interval.
-waves.forEach((wave, i) => {
+for (i = 0; i < waves.length; i++) {
+// waves.forEach((wave, i) => {
     // setTimeout(function test1() {
     //    setInterval(function test2() {
-            tide(wave, sizes[i], dirs[i])
+            tide(waves[i], sizes[i], dirs[i])
     //    }, 20);
     //}, i * 250)
 }
