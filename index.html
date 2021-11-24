@@ -183,7 +183,7 @@ function moveSun() {
 // Loop over waves incrementing each a little.
 function tide(i) {
   checkDirection(i);
-  if (dirs[i] === 0) {
+  if (dirs[i] == 0) {
     sizes[i] -= 0.0008;
   } else {
     sizes[i] += 0.0008;
@@ -208,7 +208,7 @@ function checkDirection(i) {
 // Calls tide() on the interval.
 for (i = 0; i < waves.length; i++) {
 // waves.forEach((wave, i) => {
-    setTimeout(function test1() {
+    setTimeout(function {
         setInterval(tide, 20, i);
     }, i * 250)
 }
