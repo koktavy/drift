@@ -181,27 +181,27 @@ function moveSun() {
 // var makeWaves = setInterval(tide, 20);
 
 // Loop over waves incrementing each a little.
-function tide(wave, size, dir) {
-  checkDirection(size, dir);
-  if (dir === 0) {
-    size -= 0.0008;
+function tide(i) {
+  checkDirection(i);
+  if (dirs[i] === 0) {
+    sizes[i] -= 0.0008;
   } else {
-    size += 0.0008;
+    sizes[i] += 0.0008;
   }
   // for (i = 0; i < waves.length; i++) {
     // Stagger the wave updates to create more of a "washing up" effect
     // setTimeout(function move() {
-    wave.style.transform = 'scale(' + (size + (Math.random() * 0.002)) + ')' + details;
+    waves[i].style.transform = 'scale(' + (sizes[i] + (Math.random() * 0.002)) + ')' + details;
     // }, i * 250)
   // }
 }
 
-function checkDirection(size, dir) {
-  if (size < 1.15) {
-    dir = 1;
+function checkDirection(i) {
+  if (sizes[i] < 1.15) {
+    dirs[i] = 1;
   }
-  if (size > 1.25) {
-    dir = 0;
+  if (sizes[i] > 1.25) {
+    dirs[i] = 0;
   }
 }
 
@@ -210,7 +210,7 @@ for (i = 0; i < waves.length; i++) {
 // waves.forEach((wave, i) => {
     // setTimeout(function test1() {
     //    setInterval(function test2() {
-            tide(waves[i], sizes[i], dirs[i])
+            tide(i)
     //    }, 20);
     //}, i * 250)
 }
