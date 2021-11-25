@@ -134,12 +134,12 @@ and  http://www.sinkslow.com/               -->
         </g>
       </svg>
     </container>
-    <div id="console"></div>
+    <div id="test"></div>
     <script>
 // JavaScript for 'Drift'
 
 var sun = document.getElementById('spicy');
-var console = document.getElementById('console');
+var test = document.getElementById('test');
 var mid = 235;
 var set = false;
 var details = ' rotateX(70deg) rotateY(-3.5deg) translate(-380px, 1000px) skew(30deg)';
@@ -210,8 +210,8 @@ function checkDirection(i) {
 // Calls tide() on the interval.
 for (i = 0; i < waves.length; i++) {
 // waves.forEach((wave, i) => {
-    var waveTime = i * 250
-    console.innerHTML = 'waveTime'
+    var waveTime = i * 250;
+    test.innerHTML = waveTime;
     setTimeout(function {
         setInterval(tide, 20, i);
     }, waveTime)
