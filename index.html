@@ -209,7 +209,7 @@ function checkDirection(i) {
 for (i = 0; i < waves.length; i++) {
 // waves.forEach((wave, i) => {
     var waveTime = i * 250
-    setTimeout(function {
+    setTimeout(() => {
         setInterval(tide, 20, i);
     }, waveTime)
 }
