@@ -208,9 +208,10 @@ function checkDirection(i) {
 // Calls tide() on the interval.
 for (i = 0; i < waves.length; i++) {
 // waves.forEach((wave, i) => {
-    //setTimeout(function {
+    var waveTime = i * 250
+    setTimeout(function {
         setInterval(tide, 20, i);
-    //}, i * 250)
+    }, waveTime)
 }
     </script>
   </body>
